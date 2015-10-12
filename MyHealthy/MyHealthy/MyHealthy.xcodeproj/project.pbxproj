@@ -57,6 +57,11 @@
 		F68E77FC1BCBB6C80050051B /* XFLDetialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68E77FB1BCBB6C80050051B /* XFLDetialViewController.m */; };
 		F68E77FF1BCBBC2B0050051B /* 返回箭头.png in Resources */ = {isa = PBXBuildFile; fileRef = F68E77FD1BCBBC2B0050051B /* 返回箭头.png */; };
 		F68E78001BCBBC2B0050051B /* reg_kuang.png in Resources */ = {isa = PBXBuildFile; fileRef = F68E77FE1BCBBC2B0050051B /* reg_kuang.png */; };
+		F68E780A1BCC0B1A0050051B /* LDRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F68E78031BCC0B1A0050051B /* LDRefreshFooterView.m */; };
+		F68E780B1BCC0B1A0050051B /* LDRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F68E78051BCC0B1A0050051B /* LDRefreshHeaderView.m */; };
+		F68E780C1BCC0B1A0050051B /* tableview_pull_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F68E78061BCC0B1A0050051B /* tableview_pull_refresh@2x.png */; };
+		F68E780D1BCC0B1A0050051B /* tableview_pull_refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F68E78071BCC0B1A0050051B /* tableview_pull_refresh@3x.png */; };
+		F68E780E1BCC0B1A0050051B /* UIScrollView+LDRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F68E78091BCC0B1A0050051B /* UIScrollView+LDRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +173,14 @@
 		F68E77FB1BCBB6C80050051B /* XFLDetialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFLDetialViewController.m; path = APP/XFLDetialViewController.m; sourceTree = "<group>"; };
 		F68E77FD1BCBBC2B0050051B /* 返回箭头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回箭头.png"; sourceTree = "<group>"; };
 		F68E77FE1BCBBC2B0050051B /* reg_kuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reg_kuang.png; sourceTree = "<group>"; };
+		F68E78021BCC0B1A0050051B /* LDRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDRefreshFooterView.h; sourceTree = "<group>"; };
+		F68E78031BCC0B1A0050051B /* LDRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDRefreshFooterView.m; sourceTree = "<group>"; };
+		F68E78041BCC0B1A0050051B /* LDRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDRefreshHeaderView.h; sourceTree = "<group>"; };
+		F68E78051BCC0B1A0050051B /* LDRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDRefreshHeaderView.m; sourceTree = "<group>"; };
+		F68E78061BCC0B1A0050051B /* tableview_pull_refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableview_pull_refresh@2x.png"; sourceTree = "<group>"; };
+		F68E78071BCC0B1A0050051B /* tableview_pull_refresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableview_pull_refresh@3x.png"; sourceTree = "<group>"; };
+		F68E78081BCC0B1A0050051B /* UIScrollView+LDRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LDRefresh.h"; sourceTree = "<group>"; };
+		F68E78091BCC0B1A0050051B /* UIScrollView+LDRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+LDRefresh.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +303,7 @@
 		F68E770B1BCB91570050051B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F68E78011BCC0B1A0050051B /* LDRefresh */,
 				F68E77691BCBA68C0050051B /* AFNetworking */,
 				F68E77121BCB92BD0050051B /* FoldingTabBar */,
 			);
@@ -585,6 +599,22 @@
 			path = Resources/Font;
 			sourceTree = "<group>";
 		};
+		F68E78011BCC0B1A0050051B /* LDRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				F68E78021BCC0B1A0050051B /* LDRefreshFooterView.h */,
+				F68E78031BCC0B1A0050051B /* LDRefreshFooterView.m */,
+				F68E78041BCC0B1A0050051B /* LDRefreshHeaderView.h */,
+				F68E78051BCC0B1A0050051B /* LDRefreshHeaderView.m */,
+				F68E78061BCC0B1A0050051B /* tableview_pull_refresh@2x.png */,
+				F68E78071BCC0B1A0050051B /* tableview_pull_refresh@3x.png */,
+				F68E78081BCC0B1A0050051B /* UIScrollView+LDRefresh.h */,
+				F68E78091BCC0B1A0050051B /* UIScrollView+LDRefresh.m */,
+			);
+			name = LDRefresh;
+			path = Tools/LDRefresh;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -695,6 +725,8 @@
 				F68E77671BCB9FF50050051B /* tabbar_4_s.png in Resources */,
 				F68E77661BCB9FF50050051B /* tabbar_3_s.png in Resources */,
 				F68E77F91BCBB01C0050051B /* Proxima Nova Regular.otf in Resources */,
+				F68E780D1BCC0B1A0050051B /* tableview_pull_refresh@3x.png in Resources */,
+				F68E780C1BCC0B1A0050051B /* tableview_pull_refresh@2x.png in Resources */,
 				F68E77631BCB9FF50050051B /* icon.png in Resources */,
 				F68E77621BCB9FF50050051B /* Default.png in Resources */,
 				F68E77FF1BCBBC2B0050051B /* 返回箭头.png in Resources */,
@@ -740,8 +772,10 @@
 				F68E774D1BCB95950050051B /* YALFirstTestViewController.m in Sources */,
 				F68E77331BCB92BD0050051B /* CAAnimation+YALTabBarViewAnimations.m in Sources */,
 				F68E77FC1BCBB6C80050051B /* XFLDetialViewController.m in Sources */,
+				F68E780E1BCC0B1A0050051B /* UIScrollView+LDRefresh.m in Sources */,
 				F68E77B71BCBA68C0050051B /* UIProgressView+AFNetworking.m in Sources */,
 				F68E77AA1BCBA68C0050051B /* AFHTTPRequestOperationManager.m in Sources */,
+				F68E780B1BCC0B1A0050051B /* LDRefreshHeaderView.m in Sources */,
 				F68E77371BCB92BD0050051B /* YALTabBarItem.m in Sources */,
 				F68E77AD1BCBA68C0050051B /* AFSecurityPolicy.m in Sources */,
 				F68E774F1BCB95950050051B /* YALSecondTestViewController.m in Sources */,
@@ -752,6 +786,7 @@
 				F68E77B61BCBA68C0050051B /* UIImageView+AFNetworking.m in Sources */,
 				F68E77C41BCBA6B70050051B /* BaseHTTPManager.m in Sources */,
 				F68E77551BCB95B70050051B /* YALChatDemoCollectionViewCell.m in Sources */,
+				F68E780A1BCC0B1A0050051B /* LDRefreshFooterView.m in Sources */,
 				F68E774E1BCB95950050051B /* YALFourthTestViewController.m in Sources */,
 				F68E77A91BCBA68C0050051B /* AFHTTPRequestOperation.m in Sources */,
 				F68E77381BCB92BD0050051B /* YALFoldingTabBar.m in Sources */,

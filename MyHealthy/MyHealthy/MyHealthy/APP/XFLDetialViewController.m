@@ -34,8 +34,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self create];
-    
+    [self getData];
     
     
     
@@ -58,16 +57,42 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)getData{
+    [BaseHTTPManager GET:self.url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        self.dataDict = responseObject;
+        [self create];
+
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+}
+
 - (void)create
 {
     UIView * titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 64)];
     titleView.backgroundColor = [UIColor whiteColor];
+    
+    UIImageView * bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 64)];
+    [bgView setImage:[UIImage imageNamed:@"reg_kuang"]];
+    [titleView addSubview:bgView];
+    
+    
     UIButton * back = [UIButton buttonWithType:UIButtonTypeCustom];
     back.frame = CGRectMake(10, 20, 40, 40);
     [back setBackgroundImage:[UIImage imageNamed:@"返回箭头"] forState:UIControlStateNormal];
     [back addTarget:self action:@selector(getBack) forControlEvents:UIControlEventTouchUpInside];
-    
     [titleView addSubview:back];
+    
+    UILabel * titleLabel  = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    titleLabel.center = CGPointMake(self.view.bounds.size.width/2, 42);
+    titleLabel.text = @"详情";
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    titleLabel.textColor = [UIColor colorWithRed:0.37f green:0.35f blue:0.59f alpha:1.00f];
+    [titleView addSubview:titleLabel];
+    
+    
+    
     [self.view addSubview:titleView];
     
     
@@ -88,7 +113,7 @@
     
     UILabel * timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 50, self.view.bounds.size.width - 40, 20)];
     timeLabel.textAlignment = NSTextAlignmentRight;
-    timeLabel.text = [NSString stringWithFormat:@"%@",_dataDict[@"time"]];
+    timeLabel.text = [self changeTimeWithInt:[NSString stringWithFormat:@"%@",_dataDict[@"time"]]];
     timeLabel. font = [UIFont systemFontOfSize:14];
     timeLabel.textColor = [UIColor lightGrayColor];
     [_sv addSubview:timeLabel];
@@ -100,7 +125,7 @@
         [iv setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://tnfs.tngou.net/image%@",_dataDict[@"img"]]]];
         iv.contentMode = UIViewContentModeScaleAspectFill;
         iv.clipsToBounds = YES;
-        [_sv addSubview:iv];
+//        [_sv addSubview:iv];
     }
 
     
@@ -119,27 +144,36 @@
     
     
     if (imgUrl.length > 0) {
-        meLabel.frame = CGRectMake(10, 240, size.width, size.height);
-        wv.frame = CGRectMake(10, 240, _sv.bounds.size.width-10, size.height+10);
+        meLabel.frame = CGRectMake(10, 80, size.width, size.height);
+        wv.frame = CGRectMake(10, 80, _sv.bounds.size.width-10, size.height+50);
     }else{
         meLabel.frame = CGRectMake(10, 80, size.width, size.height);
-        wv.frame = CGRectMake(10, 80, _sv.bounds.size.width-10, size.height+10);
+        wv.frame = CGRectMake(10, 80, _sv.bounds.size.width-10, size.height+50);
     }
     
 //    [_sv addSubview:meLabel];
     wv.userInteractionEnabled = NO;
     [_sv addSubview:wv];
     if (imgUrl.length > 0) {
-        if ((size.height + 240) > (self.view.bounds.size.height - 49 - 64)) {
-            _sv.contentSize = CGSizeMake(self.view.bounds.size.width, size.height + 250);
+        if ((size.height + 80) > (self.view.bounds.size.height - 49 - 64)) {
+            _sv.contentSize = CGSizeMake(self.view.bounds.size.width, size.height + 130);
         }
     }else{
         if ((size.height + 80) > (self.view.bounds.size.height - 49 - 64)) {
-            _sv.contentSize = CGSizeMake(self.view.bounds.size.width, size.height + 90);
+            _sv.contentSize = CGSizeMake(self.view.bounds.size.width, size.height + 130);
         }
     }
 
 }
-
+- (NSString *)changeTimeWithInt:(NSString *)intTime{
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm"];
+    NSTimeInterval timeInt=[intTime  doubleValue]/1000;//因为时差问题要加8小时 == 28800 sec
+    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:timeInt];
+    NSString * time = [formatter stringFromDate:detaildate];
+    return time;
+}
 
 @end

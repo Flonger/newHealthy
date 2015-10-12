@@ -13,5 +13,6 @@
 
 
 @property (nonatomic, strong) NSDictionary * dataDict;
+@property (nonatomic, strong) NSString * url;
 
 @end

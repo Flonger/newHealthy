@@ -70,7 +70,6 @@
     
 //    tabbar_1_s
     
-    tabBarController.leftBarItems = @[item1, item2];
     
     //prepare rightBarItems
 //    YALTabBarItem *item3 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"chats_icon"]
@@ -89,7 +88,8 @@
     YALTabBarItem *item4 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"tabbar_4_s"]
                                                       leftItemImage:nil
                                                      rightItemImage:nil];
-    
+    tabBarController.leftBarItems = @[item1, item2];
+
     tabBarController.rightBarItems = @[item3, item4];
     
     tabBarController.centerButtonImage = [UIImage imageNamed:@"plus_icon"];

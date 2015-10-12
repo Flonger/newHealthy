@@ -208,8 +208,8 @@
                                     <outlet property="delegate" destination="Clj-Ty-Odk" id="sM7-4v-ZN5"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="健康资讯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cC-Bk-A56">
-                                <rect key="frame" x="120" y="42" width="80" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="健康" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cC-Bk-A56">
+                                <rect key="frame" x="140" y="23" width="40" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="fOU-xa-6r3"/>
@@ -218,13 +218,28 @@
                                 <color key="textColor" red="0.96141202999999997" green="0.99800717760000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KCj-fa-OHv">
+                                <rect key="frame" x="100" y="49" width="121" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="资讯"/>
+                                    <segment title="知识"/>
+                                </segments>
+                                <color key="tintColor" red="0.96141202999999997" green="0.99800717760000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentClcik:" destination="Clj-Ty-Odk" eventType="valueChanged" id="oBZ-I3-Y5V"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.36862745099999999" green="0.35686274509999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6cC-Bk-A56" firstAttribute="top" secondItem="TIS-WZ-Zax" secondAttribute="bottom" constant="22" id="LHT-BI-D5d"/>
-                            <constraint firstItem="zL3-1e-TxQ" firstAttribute="top" secondItem="6cC-Bk-A56" secondAttribute="bottom" constant="17" id="OGs-fl-7YL"/>
+                            <constraint firstItem="KCj-fa-OHv" firstAttribute="leading" secondItem="dXr-J4-uUW" secondAttribute="leadingMargin" constant="84" id="AWc-vm-RCB"/>
+                            <constraint firstItem="KCj-fa-OHv" firstAttribute="centerX" secondItem="6cC-Bk-A56" secondAttribute="centerX" id="DLA-n0-Goa"/>
+                            <constraint firstItem="6cC-Bk-A56" firstAttribute="top" secondItem="TIS-WZ-Zax" secondAttribute="bottom" constant="3" id="LHT-BI-D5d"/>
+                            <constraint firstItem="zL3-1e-TxQ" firstAttribute="top" secondItem="6cC-Bk-A56" secondAttribute="bottom" constant="36" id="OGs-fl-7YL"/>
                             <constraint firstItem="6cC-Bk-A56" firstAttribute="centerX" secondItem="zL3-1e-TxQ" secondAttribute="centerX" id="TmU-Sk-0DV"/>
+                            <constraint firstItem="zL3-1e-TxQ" firstAttribute="top" secondItem="KCj-fa-OHv" secondAttribute="bottom" constant="3" id="Vwa-Ip-SUl"/>
                             <constraint firstAttribute="bottom" secondItem="zL3-1e-TxQ" secondAttribute="bottom" constant="80" id="aKc-Ua-2wS"/>
                             <constraint firstAttribute="trailing" secondItem="zL3-1e-TxQ" secondAttribute="trailing" id="f1h-DM-SE5"/>
                             <constraint firstItem="zL3-1e-TxQ" firstAttribute="leading" secondItem="dXr-J4-uUW" secondAttribute="leading" id="pNP-oZ-rkr"/>
