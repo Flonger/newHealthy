@@ -45,7 +45,7 @@ NSString *const YALChatDemeDateText = @"dateText";
     _page = 1;
     _type = 1;
     _refresh = NO;
-    _dataArray = [NSMutableArray array];
+    self.dataArray = [NSMutableArray array];
     _url = @"info/list?rows=10";
     
     [self getData];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66D964F1BD0EE2300B48F9D /* 212121.txt in Resources */ = {isa = PBXBuildFile; fileRef = F66D964E1BD0EE2300B48F9D /* 212121.txt */; };
 		F68323C71BB186A100A6750E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F68323C61BB186A100A6750E /* main.m */; };
 		F68323D21BB186A100A6750E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68323D11BB186A100A6750E /* Assets.xcassets */; };
 		F68323D51BB186A100A6750E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68323D31BB186A100A6750E /* LaunchScreen.storyboard */; };
@@ -82,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F66D964E1BD0EE2300B48F9D /* 212121.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 212121.txt; sourceTree = "<group>"; };
 		F68323C21BB186A100A6750E /* MyHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68323C61BB186A100A6750E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F68323D11BB186A100A6750E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		F68E770A1BCB914A0050051B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F66D964E1BD0EE2300B48F9D /* 212121.txt */,
 				F68E77F51BCBB01C0050051B /* Font */,
 				F68E775A1BCB9FF50050051B /* old */,
 			);
@@ -735,6 +738,7 @@
 				F68E77681BCB9FF50050051B /* tabbar_5_s.png in Resources */,
 				F68E773E1BCB94D80050051B /* Main.storyboard in Resources */,
 				F68E78001BCBBC2B0050051B /* reg_kuang.png in Resources */,
+				F66D964F1BD0EE2300B48F9D /* 212121.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

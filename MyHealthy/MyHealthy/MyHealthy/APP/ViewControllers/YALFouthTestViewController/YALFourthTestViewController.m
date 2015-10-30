@@ -33,4 +33,36 @@
 }
 
 
+- (void)viewDidLoad{
+
+    NSString *Data = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"212121" ofType:@"txt"]encoding:NSUTF8StringEncoding error:nil];
+    
+    NSArray * arr1 = [Data componentsSeparatedByString:@"A."];
+    NSLog(@"%@",arr1);
+    NSMutableArray * A = [NSMutableArray array];
+    for (int i = 1; i < arr1.count; i++) {
+        NSArray * arr2 = [arr1[i] componentsSeparatedByString:@"B."];
+        for (int i = 0; i< arr2.count; i++) {
+            if (!(i%2)) {
+                [A addObject:arr2[i]];
+            }
+        }
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end
